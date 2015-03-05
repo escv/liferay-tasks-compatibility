@@ -1,0 +1,8 @@
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+
+<service-builder package-path="com.prodyna.liferay.tasks">
+	<namespace>PD</namespace>
+	<entity name="WorkflowTask" local-service="true" remote-service="true">
+	</entity>
+
+</service-builder>
