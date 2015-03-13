@@ -10,7 +10,7 @@ public class PDWorkflowTask {
 	
 	private String title = "";
 	
-	private long createTimestamp;
+	private String createDate;
 	
 	private String workflowName = "";
 	
@@ -18,7 +18,7 @@ public class PDWorkflowTask {
 	
 	private long articleId;
 	
-	private String previewUrl;
+	private String previewUrl = "";
 	
 	private List<String> transitions;
 	
@@ -45,12 +45,12 @@ public class PDWorkflowTask {
 		this.title = title;
 	}
 
-	public long getCreateTimestamp() {
-		return createTimestamp;
+	public String getCreateDate() {
+		return createDate;
 	}
 
-	public void setCreateTimestamp(long createTimestamp) {
-		this.createTimestamp = createTimestamp;
+	public void setCreateDate(String createDate) {
+		this.createDate = createDate;
 	}
 
 	public String getWorkflowName() {

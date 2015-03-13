@@ -21,6 +21,8 @@ public class WorkflowTaskServiceClpInvoker {
     private String[] _methodParameterTypes22;
     private String _methodName23;
     private String[] _methodParameterTypes23;
+    private String _methodName24;
+    private String[] _methodParameterTypes24;
 
     public WorkflowTaskServiceClpInvoker() {
         _methodName16 = "getBeanIdentifier";
@@ -48,6 +50,10 @@ public class WorkflowTaskServiceClpInvoker {
         _methodParameterTypes23 = new String[] {
                 "long", "java.lang.String", "java.lang.String"
             };
+
+        _methodName24 = "newTasksAfterTimestamp";
+
+        _methodParameterTypes24 = new String[] { "long", "long" };
     }
 
     public Object invokeMethod(String name, String[] parameterTypes,
@@ -84,6 +90,12 @@ public class WorkflowTaskServiceClpInvoker {
                 Arrays.deepEquals(_methodParameterTypes23, parameterTypes)) {
             return WorkflowTaskServiceUtil.completeWorkflowTask(((Long) arguments[0]).longValue(),
                 (java.lang.String) arguments[1], (java.lang.String) arguments[2]);
+        }
+
+        if (_methodName24.equals(name) &&
+                Arrays.deepEquals(_methodParameterTypes24, parameterTypes)) {
+            return WorkflowTaskServiceUtil.newTasksAfterTimestamp(((Long) arguments[0]).longValue(),
+                ((Long) arguments[1]).longValue());
         }
 
         throw new UnsupportedOperationException();

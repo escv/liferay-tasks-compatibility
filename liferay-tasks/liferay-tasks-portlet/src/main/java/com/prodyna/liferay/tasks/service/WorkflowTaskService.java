@@ -53,18 +53,27 @@ public interface WorkflowTaskService extends BaseService, InvokableService {
 
     public java.util.List<com.prodyna.liferay.tasks.service.model.PDWorkflowTask> myWorkflowTasks(
         long companyId)
-        throws com.liferay.portal.kernel.exception.PortalException;
+        throws com.liferay.portal.kernel.exception.PortalException,
+            com.liferay.portal.kernel.exception.SystemException;
 
     public java.util.List<com.prodyna.liferay.tasks.service.model.PDWorkflowTask> groupWorkflowTasks(
         long companyId)
-        throws com.liferay.portal.kernel.exception.PortalException;
+        throws com.liferay.portal.kernel.exception.PortalException,
+            com.liferay.portal.kernel.exception.SystemException;
 
     public com.prodyna.liferay.tasks.service.model.PDWorkflowTask assignMeWorkflowTask(
         long companyId, long workflowTaskId)
-        throws com.liferay.portal.kernel.exception.PortalException;
+        throws com.liferay.portal.kernel.exception.PortalException,
+            com.liferay.portal.kernel.exception.SystemException;
 
     public com.prodyna.liferay.tasks.service.model.PDWorkflowTask completeWorkflowTask(
         long workflowTaskId, java.lang.String transition,
         java.lang.String comment)
-        throws com.liferay.portal.kernel.workflow.WorkflowException;
+        throws com.liferay.portal.kernel.exception.PortalException,
+            com.liferay.portal.kernel.exception.SystemException;
+
+    public java.util.List<com.prodyna.liferay.tasks.service.model.PDWorkflowTask> newTasksAfterTimestamp(
+        long companyId, long timestamp)
+        throws com.liferay.portal.kernel.exception.PortalException,
+            com.liferay.portal.kernel.exception.SystemException;
 }

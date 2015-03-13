@@ -6,7 +6,7 @@
 	<artifactId>liferay-tasks</artifactId>
 	<packaging>pom</packaging>
 	<name>liferay-tasks</name>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2</version>
 	<properties>
 		<liferay.version>6.2.0-RC5</liferay.version>
 		<liferay.maven.plugin.version>6.2.10.10</liferay.maven.plugin.version>

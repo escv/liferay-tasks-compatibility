@@ -53,28 +53,39 @@ public class WorkflowTaskServiceUtil {
 
     public static java.util.List<com.prodyna.liferay.tasks.service.model.PDWorkflowTask> myWorkflowTasks(
         long companyId)
-        throws com.liferay.portal.kernel.exception.PortalException {
+        throws com.liferay.portal.kernel.exception.PortalException,
+            com.liferay.portal.kernel.exception.SystemException {
         return getService().myWorkflowTasks(companyId);
     }
 
     public static java.util.List<com.prodyna.liferay.tasks.service.model.PDWorkflowTask> groupWorkflowTasks(
         long companyId)
-        throws com.liferay.portal.kernel.exception.PortalException {
+        throws com.liferay.portal.kernel.exception.PortalException,
+            com.liferay.portal.kernel.exception.SystemException {
         return getService().groupWorkflowTasks(companyId);
     }
 
     public static com.prodyna.liferay.tasks.service.model.PDWorkflowTask assignMeWorkflowTask(
         long companyId, long workflowTaskId)
-        throws com.liferay.portal.kernel.exception.PortalException {
+        throws com.liferay.portal.kernel.exception.PortalException,
+            com.liferay.portal.kernel.exception.SystemException {
         return getService().assignMeWorkflowTask(companyId, workflowTaskId);
     }
 
     public static com.prodyna.liferay.tasks.service.model.PDWorkflowTask completeWorkflowTask(
         long workflowTaskId, java.lang.String transition,
         java.lang.String comment)
-        throws com.liferay.portal.kernel.workflow.WorkflowException {
+        throws com.liferay.portal.kernel.exception.PortalException,
+            com.liferay.portal.kernel.exception.SystemException {
         return getService()
                    .completeWorkflowTask(workflowTaskId, transition, comment);
+    }
+
+    public static java.util.List<com.prodyna.liferay.tasks.service.model.PDWorkflowTask> newTasksAfterTimestamp(
+        long companyId, long timestamp)
+        throws com.liferay.portal.kernel.exception.PortalException,
+            com.liferay.portal.kernel.exception.SystemException {
+        return getService().newTasksAfterTimestamp(companyId, timestamp);
     }
 
     public static void clearService() {

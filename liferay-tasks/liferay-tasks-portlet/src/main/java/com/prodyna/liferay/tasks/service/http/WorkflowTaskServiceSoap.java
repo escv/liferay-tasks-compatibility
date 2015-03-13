@@ -95,4 +95,19 @@ public class WorkflowTaskServiceSoap {
             throw new RemoteException(e.getMessage());
         }
     }
+
+    public static com.prodyna.liferay.tasks.service.model.PDWorkflowTask[] newTasksAfterTimestamp(
+        long companyId, long timestamp) throws RemoteException {
+        try {
+            java.util.List<com.prodyna.liferay.tasks.service.model.PDWorkflowTask> returnValue =
+                WorkflowTaskServiceUtil.newTasksAfterTimestamp(companyId,
+                    timestamp);
+
+            return returnValue.toArray(new com.prodyna.liferay.tasks.service.model.PDWorkflowTask[returnValue.size()]);
+        } catch (Exception e) {
+            _log.error(e, e);
+
+            throw new RemoteException(e.getMessage());
+        }
+    }
 }
