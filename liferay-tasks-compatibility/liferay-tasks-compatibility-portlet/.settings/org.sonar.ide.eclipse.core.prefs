@@ -1,5 +1,5 @@
 eclipse.preferences.version=1
 extraProperties=
-projectKey=com.prodyna.liferay.tasks\:liferay-tasks-portlet-service
+projectKey=com.prodyna.liferay.tasks\:liferay-tasks-compatibility-portlet
 serverUrl=http\://localhost\:9000
 version=2
